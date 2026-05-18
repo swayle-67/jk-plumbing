@@ -1,0 +1,8 @@
+{
+  "name": "JK Plumbers (Pty) Ltd.",
+  "description": "Professional plumbing services in Durban, providing reliable leak repairs, geyser services, and 24/7 emergency support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

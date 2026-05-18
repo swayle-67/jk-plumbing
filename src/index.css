@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Work Sans", sans-serif;
+
+  --color-primary: #dc2626;
+  --color-primary-dark: #991b1b;
+  --color-secondary: #475569;
+  --color-surface: #0a0a0a;
+  --color-surface-light: #171717;
+  --color-on-surface: #ffffff;
+  --color-on-surface-variant: #a3a3a3;
+  --color-accent: #f59e0b;
+  
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased selection:bg-primary/30 selection:text-white;
+    word-spacing: 0.05em;
+  }
+  h1, h2, h3, h4, .font-display {
+    @apply font-display;
+    letter-spacing: -0.01em;
+    word-spacing: 0.1em;
+  }
+}
+
+.wave-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3%3Cpath fill='%23dc2626' fill-opacity='0.08' d='M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,165.3C672,139,768,117,864,128C960,139,1056,181,1152,181.3C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+.glass {
+  @apply bg-surface-light/80 backdrop-blur-md shadow-2xl;
+}
+
+.glow-primary {
+  box-shadow: 0 0 40px -10px rgba(220, 38, 38, 0.4);
+}
